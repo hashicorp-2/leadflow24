@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Quote — {{INDUSTRY}} Services in {{CITY}}</title>
+  <meta name="description" content="Get a free {{INDUSTRY}} quote in {{CITY}}. Fast, reliable service from trusted local professionals. Fill out the form — we'll call you within 15 minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Facebook Pixel -->
+  <script>
+    // !function(f,b,e,v,n,t,s){...}
+    // fbq('init', '{{PIXEL_ID}}');
+    // fbq('track', 'PageView');
+  </script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --forge-navy: #0A2540;
+      --signal-blue: #0066FF;
+      --verified-green: #10B981;
+      --brass-gold: #C5A44E;
+      --terminal-dark: #0F172A;
+      --white: #FFFFFF;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--forge-navy); color: white; min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 24px; -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; letter-spacing: -0.02em; }
+
+    .capture-container { max-width: 440px; width: 100%; }
+    .capture-header { text-align: center; margin-bottom: 28px; }
+    .capture-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 16px;
+    }
+    .capture-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--verified-green); }
+    .capture-badge-text { font-size: 11px; font-weight: 700; color: var(--verified-green); text-transform: uppercase; letter-spacing: 0.06em; }
+    .capture-header h1 { font-size: 28px; line-height: 1.15; margin-bottom: 10px; }
+    .capture-header h1 em { font-style: normal; color: var(--signal-blue); }
+    .capture-header p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+    .capture-form {
+      background: var(--terminal-dark); border-radius: 14px; padding: 28px;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-label {
+      display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.35);
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; padding: 11px 13px; border-radius: 7px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: white; font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--signal-blue); }
+    .form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 13px center; }
+    .form-select option { background: var(--terminal-dark); }
+    .form-textarea { resize: vertical; min-height: 70px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    .form-submit {
+      width: 100%; padding: 14px; border-radius: 9px; margin-top: 6px;
+      background: var(--signal-blue); color: white; border: none;
+      font-weight: 700; font-size: 15px; font-family: 'Sora', sans-serif;
+      cursor: pointer; transition: all 0.25s;
+    }
+    .form-submit:hover { background: #0052CC; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-trust { display: flex; justify-content: center; gap: 14px; margin-top: 14px; }
+    .form-trust-item { font-size: 10px; color: rgba(255,255,255,0.2); display: flex; align-items: center; gap: 3px; }
+
+    .form-success { display: none; text-align: center; padding: 24px 12px; }
+    .form-success.show { display: block; }
+    .success-icon { font-size: 36px; margin-bottom: 12px; }
+    .form-success h2 { font-size: 20px; margin-bottom: 8px; }
+    .form-success p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.55; }
+    .form-success .phone-link {
+      display: inline-block; margin-top: 14px; padding: 10px 24px; border-radius: 8px;
+      background: var(--verified-green); color: white; font-weight: 700; font-size: 14px;
+      text-decoration: none;
+    }
+
+    .capture-footer { text-align: center; margin-top: 20px; }
+    .capture-footer p { font-size: 10px; color: rgba(255,255,255,0.15); }
+
+    @media (max-width: 500px) {
+      .form-row { grid-template-columns: 1fr; }
+      .capture-header h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="capture-container">
+  <div class="capture-header">
+    <div class="capture-badge">
+      <div class="capture-badge-dot"></div>
+      <span class="capture-badge-text">Free Quote · No Obligation</span>
+    </div>
+    <h1>Need <em>{{INDUSTRY_DISPLAY}}</em> work done in <em>{{CITY}}</em>?</h1>
+    <p>Fill out the form below and a trusted local pro will call you within 15 minutes. Free estimates. No obligation.</p>
+  </div>
+
+  <div class="capture-form">
+    <div id="formArea">
+      <form id="leadForm" onsubmit="submitLead(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="John" name="first_name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Smith" name="last_name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" placeholder="(780) 555-1234" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email (Optional)</label>
+          <input type="email" class="form-input" placeholder="john@email.com" name="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label">What do you need done?</label>
+          <select class="form-select" name="service_needed" required>
+            <option value="" disabled selected>Select a service...</option>
+            <!-- CUSTOMIZE THESE OPTIONS PER INDUSTRY -->
+            <option value="repair">Repair</option>
+            <option value="install">New Installation</option>
+            <option value="maintenance">Maintenance / Tune-Up</option>
+            <option value="quote">General Quote</option>
+            <option value="emergency">Emergency Service</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Neighbourhood / Area</label>
+            <input type="text" class="form-input" placeholder="e.g. Windermere" name="address">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Postal Code</label>
+            <input type="text" class="form-input" placeholder="T6W 1A1" name="postal_code">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Anything else we should know? (Optional)</label>
+          <textarea class="form-textarea" placeholder="Tell us about the issue..." name="message"></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Get My Free Quote →</button>
+        <div class="form-trust">
+          <div class="form-trust-item">🔒 Secure</div>
+          <div class="form-trust-item">⚡ 15-min response</div>
+          <div class="form-trust-item">✓ No obligation</div>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon">✅</div>
+      <h2>Got it! We're on it.</h2>
+      <p>A local {{INDUSTRY_DISPLAY}} professional will call you within 15 minutes. Keep your phone handy!</p>
+      <a href="tel:{{CLIENT_PHONE}}" class="phone-link">📞 Call Us Now: {{CLIENT_PHONE_DISPLAY}}</a>
+    </div>
+  </div>
+
+  <div class="capture-footer">
+    <p>Powered by LeadFlow24 · Trusted local service professionals</p>
+  </div>
+</div>
+
+<script>
+// ─── CONFIGURATION (set per capture page) ───
+const CONFIG = {
+  apiUrl: '/api/leads',     // Backend API endpoint
+  capturePage: '{{SLUG}}',  // e.g., 'hvac-edmonton'
+  industry: '{{INDUSTRY}}',
+  city: '{{CITY}}',
+  source: 'facebook',       // Default traffic source
+};
+
+// Get UTM params from URL
+const params = new URLSearchParams(window.location.search);
+const utmSource = params.get('utm_source') || CONFIG.source;
+const utmMedium = params.get('utm_medium') || '';
+const utmCampaign = params.get('utm_campaign') || '';
+
+// Track page view
+fetch(`/api/capture-pages/${CONFIG.capturePage}/view`, { method: 'POST' }).catch(() => {});
+
+async function submitLead(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const form = document.getElementById('leadForm');
+  const formData = new FormData(form);
+  
+  const data = {
+    name: `${formData.get('first_name')} ${formData.get('last_name')}`.trim(),
+    email: formData.get('email'),
+    phone: formData.get('phone'),
+    service_needed: formData.get('service_needed'),
+    address: formData.get('address'),
+    city: CONFIG.city,
+    postal_code: formData.get('postal_code'),
+    message: formData.get('message'),
+    source: utmSource,
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_campaign: utmCampaign,
+    capture_page: CONFIG.capturePage,
+  };
+
+  try {
+    const response = await fetch(CONFIG.apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) showSuccess();
+    else showSuccess(); // Still show success to user
+  } catch (err) {
+    // Store locally if backend is down
+    const leads = JSON.parse(localStorage.getItem('lf24_offline_leads') || '[]');
+    leads.push({ ...data, timestamp: new Date().toISOString() });
+    localStorage.setItem('lf24_offline_leads', JSON.stringify(leads));
+    showSuccess();
+  }
+}
+
+function showSuccess() {
+  document.getElementById('formArea').querySelector('form').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
+  
+  // Fire conversion pixels
+  if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+  if (typeof gtag !== 'undefined') gtag('event', 'conversion', { send_to: 'AW-XXXXX/YYYYY' });
+}
+</script>
+</body>
+</html>

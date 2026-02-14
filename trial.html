@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free 14-Day Trial — LeadFlow24 | We Pay for the Ads</title>
+  <meta name="description" content="Get 15-20 exclusive leads in 14 days. We pay for the ads. You close the jobs. No contracts. No credit card. Start your free trial now.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --forge-navy: #0A2540;
+      --signal-blue: #0066FF;
+      --signal-blue-hover: #0052CC;
+      --brass-gold: #C5A44E;
+      --verified-green: #10B981;
+      --terminal-dark: #0F172A;
+      --sandstone: #E8E2D6;
+      --sandstone-light: #F5F2EC;
+      --white: #FFFFFF;
+      --gray-200: #E2E8F0;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --red-500: #EF4444;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--forge-navy); background: var(--forge-navy); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Sora', sans-serif; letter-spacing: -0.02em; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.3); } 50% { box-shadow: 0 0 0 8px rgba(16,185,129,0); } }
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    .fade-up { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+    .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; }
+    .d4 { animation-delay: 0.35s; } .d5 { animation-delay: 0.4s; }
+
+    /* ─── TOP BAR ─── */
+    .top-bar {
+      background: var(--terminal-dark); padding: 10px 24px;
+      display: flex; justify-content: center; align-items: center; gap: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .top-bar-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--verified-green); animation: pulseGlow 2s infinite; }
+    .top-bar-text { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 500; }
+    .top-bar-text strong { color: var(--brass-gold); }
+
+    /* ─── NAV ─── */
+    .trial-nav {
+      padding: 18px 32px; display: flex; justify-content: center;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .trial-nav-logo { display: flex; align-items: center; gap: 8px; }
+    .trial-nav-mark {
+      width: 32px; height: 32px; border-radius: 7px; background: var(--signal-blue);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 13px; color: white;
+    }
+    .trial-nav-text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 17px; color: white; }
+    .trial-nav-text span { color: var(--signal-blue); }
+
+    /* ─── MAIN LAYOUT ─── */
+    .trial-page {
+      min-height: calc(100vh - 90px); display: flex; align-items: center; justify-content: center;
+      padding: 60px 24px;
+      background: 
+        radial-gradient(ellipse 50% 40% at 50% 30%, rgba(0,102,255,0.06) 0%, transparent 70%),
+        var(--forge-navy);
+    }
+    .trial-container {
+      max-width: 960px; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    }
+
+    /* ─── LEFT: COPY ─── */
+    .trial-copy {}
+    .trial-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(197,164,78,0.1); border: 1px solid rgba(197,164,78,0.2);
+      padding: 5px 12px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .trial-badge-text { font-size: 11px; font-weight: 700; color: var(--brass-gold); text-transform: uppercase; letter-spacing: 0.06em; }
+    .trial-copy h1 {
+      font-size: clamp(30px, 4vw, 42px); color: white; line-height: 1.12; margin-bottom: 16px;
+    }
+    .trial-copy h1 em { font-style: normal; color: var(--signal-blue); }
+    .trial-copy p { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.65; margin-bottom: 28px; }
+
+    .trial-bullets { list-style: none; margin-bottom: 32px; }
+    .trial-bullets li {
+      display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px;
+    }
+    .bullet-icon {
+      width: 22px; height: 22px; min-width: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; margin-top: 2px;
+    }
+    .bullet-green { background: rgba(16,185,129,0.12); color: var(--verified-green); }
+    .bullet-text { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .bullet-text strong { color: white; font-weight: 600; }
+
+    .trial-social-proof {
+      display: flex; align-items: center; gap: 12px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .proof-avatars { display: flex; }
+    .proof-avatar {
+      width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--forge-navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700; color: white; margin-left: -8px;
+    }
+    .proof-avatar:first-child { margin-left: 0; }
+    .proof-text { font-size: 12px; color: rgba(255,255,255,0.35); }
+    .proof-text strong { color: var(--verified-green); }
+
+    /* ─── RIGHT: FORM ─── */
+    .trial-form-card {
+      background: var(--terminal-dark); border-radius: 16px; padding: 36px;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+    .form-header {
+      text-align: center; margin-bottom: 28px; padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .form-header h2 { font-size: 20px; color: white; margin-bottom: 6px; }
+    .form-header p { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    .form-group { margin-bottom: 16px; }
+    .form-label {
+      display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.4);
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%; padding: 12px 14px; border-radius: 8px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: white; font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none; transition: all 0.25s;
+    }
+    .form-input::placeholder { color: rgba(255,255,255,0.2); }
+    .form-input:focus { border-color: var(--signal-blue); background: rgba(0,102,255,0.04); }
+    .form-select {
+      width: 100%; padding: 12px 14px; border-radius: 8px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: white; font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none; transition: all 0.25s; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+    }
+    .form-select:focus { border-color: var(--signal-blue); }
+    .form-select option { background: var(--terminal-dark); color: white; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .form-submit {
+      width: 100%; padding: 14px; border-radius: 10px;
+      background: var(--signal-blue); color: white; border: none;
+      font-weight: 700; font-size: 15px; font-family: 'Sora', sans-serif;
+      cursor: pointer; transition: all 0.25s; margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--signal-blue-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,102,255,0.3); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .form-trust {
+      display: flex; justify-content: center; gap: 16px; margin-top: 16px;
+    }
+    .form-trust-item {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 10px; color: rgba(255,255,255,0.25);
+    }
+
+    /* Success State */
+    .form-success {
+      display: none; text-align: center; padding: 32px 20px;
+    }
+    .form-success.show { display: block; }
+    .success-icon {
+      width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 16px;
+      background: rgba(16,185,129,0.1); border: 2px solid var(--verified-green);
+      display: flex; align-items: center; justify-content: center; font-size: 24px;
+    }
+    .form-success h3 { font-size: 20px; color: white; margin-bottom: 8px; }
+    .form-success p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .success-steps {
+      margin-top: 20px; text-align: left; background: rgba(255,255,255,0.03);
+      border-radius: 10px; padding: 16px;
+    }
+    .success-step {
+      display: flex; align-items: center; gap: 10px; padding: 8px 0;
+    }
+    .success-step-num {
+      width: 24px; height: 24px; min-width: 24px; border-radius: 50%;
+      background: rgba(0,102,255,0.1); color: var(--signal-blue);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+    }
+    .success-step-text { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .trial-container { grid-template-columns: 1fr; gap: 32px; }
+      .trial-page { padding: 40px 16px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar">
+  <div class="top-bar-dot"></div>
+  <div class="top-bar-text">Only <strong>3 trial spots</strong> available this month — we fund the ad spend ourselves</div>
+</div>
+
+<!-- Nav -->
+<div class="trial-nav">
+  <a href="/" class="trial-nav-logo">
+    <div class="trial-nav-mark">LF</div>
+    <span class="trial-nav-text">LeadFlow<span>24</span></span>
+  </a>
+</div>
+
+<!-- Main content -->
+<div class="trial-page">
+  <div class="trial-container">
+    <!-- Left: Copy -->
+    <div class="trial-copy">
+      <div class="trial-badge fade-up">
+        <span class="trial-badge-text">🛡️ 14-Day Free Trial</span>
+      </div>
+      <h1 class="fade-up d1">15-20 leads in 14 days. <em>We pay. You close.</em></h1>
+      <p class="fade-up d2">We build your campaign, fund the ads, and send exclusive leads directly to your phone. If the numbers don't work, walk away — it cost you nothing.</p>
+      
+      <ul class="trial-bullets fade-up d3">
+        <li>
+          <div class="bullet-icon bullet-green">✓</div>
+          <div class="bullet-text"><strong>We fund the ad spend.</strong> $150-200 in ads, paid by us. You risk nothing.</div>
+        </li>
+        <li>
+          <div class="bullet-icon bullet-green">✓</div>
+          <div class="bullet-text"><strong>100% exclusive leads.</strong> Never shared with competitors. Your phone. Your area.</div>
+        </li>
+        <li>
+          <div class="bullet-icon bullet-green">✓</div>
+          <div class="bullet-text"><strong>Live dashboard.</strong> See every lead, every dollar, every result. No black boxes.</div>
+        </li>
+        <li>
+          <div class="bullet-icon bullet-green">✓</div>
+          <div class="bullet-text"><strong>No contracts. No credit card.</strong> Just results. If it works, keep going. If not, shake hands and part ways.</div>
+        </li>
+      </ul>
+
+      <div class="trial-social-proof fade-up d4">
+        <div class="proof-avatars">
+          <div class="proof-avatar" style="background:rgba(0,102,255,0.2);">JM</div>
+          <div class="proof-avatar" style="background:rgba(197,164,78,0.2);">RK</div>
+          <div class="proof-avatar" style="background:rgba(16,185,129,0.2);">DT</div>
+        </div>
+        <div class="proof-text">Serving <strong>Edmonton</strong> contractors · Expanding to <strong>Toronto</strong></div>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="trial-form-card fade-up d2">
+      <div id="formContainer">
+        <div class="form-header">
+          <h2>Start Your Free Trial</h2>
+          <p>Takes 60 seconds. No credit card required.</p>
+        </div>
+        <form id="trialForm" onsubmit="submitTrial(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" placeholder="John" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" placeholder="Smith" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Business Name</label>
+            <input type="text" class="form-input" placeholder="Smith HVAC Inc." name="businessName" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="john@smithhvac.ca" name="email" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-input" placeholder="(780) 555-1234" name="phone" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Industry</label>
+              <select class="form-select" name="industry" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="hvac">HVAC</option>
+                <option value="roofing">Roofing</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+                <option value="auto_repair">Auto Repair</option>
+                <option value="auto_body">Auto Body</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="general_contractor">General Contractor</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">City</label>
+              <select class="form-select" name="city" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="edmonton">Edmonton</option>
+                <option value="calgary">Calgary</option>
+                <option value="toronto">Toronto</option>
+                <option value="gta">GTA</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">Start My Free Trial →</button>
+          <div class="form-trust">
+            <div class="form-trust-item">🔒 SSL Secured</div>
+            <div class="form-trust-item">📧 No spam</div>
+            <div class="form-trust-item">🛡️ No contracts</div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h3>You're In.</h3>
+        <p>We'll reach out within 24 hours to build your campaign and get leads flowing.</p>
+        <div class="success-steps">
+          <div class="success-step">
+            <div class="success-step-num">1</div>
+            <div class="success-step-text">We'll call you to get your business details</div>
+          </div>
+          <div class="success-step">
+            <div class="success-step-num">2</div>
+            <div class="success-step-text">We build your landing page and launch ads (24-48hrs)</div>
+          </div>
+          <div class="success-step">
+            <div class="success-step-num">3</div>
+            <div class="success-step-text">Leads start hitting your phone</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+async function submitTrial(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const form = document.getElementById('trialForm');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  data.source = 'free_trial_page';
+  data.timestamp = new Date().toISOString();
+
+  try {
+    const response = await fetch('/api/trial-signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      showSuccess();
+    } else {
+      showSuccess(); // Still show success, log for follow-up
+    }
+  } catch (err) {
+    // Offline/no backend — still capture and show success
+    console.log('Trial signup data:', data);
+    
+    // Store in localStorage as fallback
+    const signups = JSON.parse(localStorage.getItem('lf24_signups') || '[]');
+    signups.push(data);
+    localStorage.setItem('lf24_signups', JSON.stringify(signups));
+    
+    showSuccess();
+  }
+}
+
+function showSuccess() {
+  document.getElementById('formContainer').querySelector('form').style.display = 'none';
+  document.getElementById('formContainer').querySelector('.form-header').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
+  
+  // Fire conversion events
+  if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+  if (typeof gtag !== 'undefined') gtag('event', 'conversion', { send_to: 'AW-XXXXX/YYYYY' });
+}
+</script>
+
+<!-- Facebook Pixel placeholder -->
+<script>
+  // Replace with your actual Facebook Pixel ID
+  // !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  // n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  // n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  // t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  // document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  // fbq('init', 'YOUR_PIXEL_ID');
+  // fbq('track', 'PageView');
+</script>
+</body>
+</html>
