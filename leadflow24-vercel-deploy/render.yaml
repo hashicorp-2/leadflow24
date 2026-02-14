@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: leadflow24
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+    healthCheckPath: /api/health
+    disk:
+      name: leadflow24-data
+      mountPath: /app/data
+      sizeGB: 1

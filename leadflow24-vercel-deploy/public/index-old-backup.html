@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeadFlow24 — Exclusive Leads for Contractors. We Pay. You Close.</title>
+  <meta name="description" content="LeadFlow24 delivers exclusive, verified leads directly to contractors. 14-day free trial — we fund the ads. HVAC, roofing, plumbing, auto. Real dashboard, real results.">
+  <meta property="og:title" content="LeadFlow24 — We Send Leads. You Close Jobs.">
+  <meta property="og:description" content="Exclusive leads for contractors. 14-day free trial — we fund the ads. Track every lead, every dollar, every job.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leadflow24.com">
+  <link rel="canonical" href="https://leadflow24.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; background: #FAFAF8; color: #0A2540; overflow-x: hidden; }
+    :root {
+      --forge-navy: #0A2540; --signal-blue: #0066FF; --signal-blue-hover: #0052CC;
+      --brass-gold: #C5A44E; --brass-gold-light: #D4B96A;
+      --verified-green: #10B981; --verified-green-bg: rgba(16, 185, 129, 0.08);
+      --terminal-dark: #0F172A; --sandstone: #E8E2D6; --sandstone-light: #F5F2EC;
+      --gray-100: #F1F5F9; --gray-200: #E2E8F0; --gray-400: #94A3B8; --gray-500: #64748B; --gray-600: #475569; --red-500: #EF4444;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3, h4, h5 { font-family: 'Sora', sans-serif; letter-spacing: -0.02em; line-height: 1.15; }
+    a { color: inherit; text-decoration: none; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.3); } 50% { box-shadow: 0 0 0 8px rgba(16,185,129,0); } }
+    @keyframes pulseDot { 0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); } 50% { box-shadow: 0 0 0 6px rgba(239,68,68,0); } }
+    .fade-up { animation: fadeUp 0.7s ease-out forwards; opacity: 0; }
+    .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 24px; transition: all 0.3s ease; }
+    nav.scrolled { background: rgba(10,37,64,0.97); backdrop-filter: blur(12px); padding: 10px 24px; box-shadow: 0 1px 20px rgba(0,0,0,0.15); }
+    .nav-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-mark { position: relative; width: 36px; height: 36px; background: linear-gradient(135deg, var(--signal-blue), #0044BB); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 13px; color: white; }
+    .nav-logo-mark::after { content: ''; position: absolute; width: 6px; height: 6px; background: var(--verified-green); border-radius: 50%; top: -1px; right: -1px; }
+    .nav-logo-text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 19px; color: white; }
+    .nav-logo-text span { color: var(--signal-blue); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: rgba(255,255,255,0.65); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: white; }
+    .nav-cta { background: var(--signal-blue) !important; color: white !important; padding: 9px 20px; border-radius: 8px; font-weight: 700; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--signal-blue-hover) !important; transform: translateY(-1px); }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-toggle span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+    .mobile-menu { display: none; flex-direction: column; padding: 12px 0; }
+    .mobile-menu a { color: rgba(255,255,255,0.7); padding: 10px 0; font-size: 15px; font-weight: 500; }
+    .mobile-menu.open { display: flex; }
+    @media (max-width: 768px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
+
+    /* HERO */
+    .hero { background: var(--forge-navy); padding: 140px 24px 80px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; opacity: 0.025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); }
+    .hero::after { content: ''; position: absolute; top: -50%; right: -20%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(0,102,255,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    @media (max-width: 960px) { .hero-inner { grid-template-columns: 1fr; } .hero-dashboard { display: none; } }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.18); border-radius: 100px; padding: 6px 16px 6px 10px; margin-bottom: 24px; }
+    .hero-badge-dot { width: 7px; height: 7px; background: var(--red-500); border-radius: 50%; animation: pulseDot 2s ease-in-out infinite; }
+    .hero-badge-text { color: #FF6B6B; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(36px, 5vw, 56px); color: white; margin-bottom: 20px; max-width: 620px; }
+    .hero h1 em { font-style: normal; color: var(--signal-blue); }
+    .hero-sub { font-size: 17px; color: rgba(255,255,255,0.5); line-height: 1.65; max-width: 520px; margin-bottom: 32px; }
+    .hero-ctas { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--signal-blue); color: white; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 15px; transition: all 0.2s; }
+    .btn-primary:hover { background: var(--signal-blue-hover); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,102,255,0.3); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.5); padding: 14px 20px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.25); color: white; }
+    .hero-proof { display: flex; gap: 36px; }
+    .hero-proof-num { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: white; }
+    .hero-proof-label { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 500; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Hero Mini Dashboard */
+    .hero-dashboard { background: var(--terminal-dark); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 20px; }
+    .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .dash-title { color: rgba(255,255,255,0.5); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+    .dash-live { display: flex; align-items: center; gap: 6px; }
+    .dash-live-dot { width: 6px; height: 6px; background: var(--verified-green); border-radius: 50%; animation: pulseGlow 2s infinite; }
+    .dash-live-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--verified-green); text-transform: uppercase; letter-spacing: 0.08em; }
+    .dash-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+    .dash-stat { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; text-align: center; }
+    .dash-stat-label { font-size: 10px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .dash-stat-val { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; }
+    .dash-stat-val.green { color: var(--verified-green); } .dash-stat-val.blue { color: var(--signal-blue); } .dash-stat-val.gold { color: var(--brass-gold); }
+    .dash-stat-change { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 4px; }
+    .dash-leads { display: flex; flex-direction: column; gap: 6px; }
+    .dash-lead-row { display: flex; align-items: center; gap: 12px; padding: 10px; background: rgba(255,255,255,0.02); border-radius: 8px; }
+    .dash-lead-avatar { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+    .dash-lead-info { flex: 1; }
+    .dash-lead-name { font-size: 13px; font-weight: 600; color: white; }
+    .dash-lead-detail { font-size: 11px; color: rgba(255,255,255,0.3); }
+    .dash-lead-tag { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0; }
+    .tag-new { background: rgba(0,102,255,0.12); color: var(--signal-blue); }
+    .tag-contacted { background: rgba(197,164,78,0.12); color: var(--brass-gold); }
+    .tag-booked { background: rgba(16,185,129,0.12); color: var(--verified-green); }
+
+    /* TRUST BAR */
+    .trust-bar { background: white; border-bottom: 1px solid var(--gray-200); padding: 16px 24px; }
+    .trust-bar-inner { max-width: 1140px; margin: 0 auto; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; }
+    .trust-text { font-size: 13px; font-weight: 600; color: var(--gray-600); }
+
+    /* SECTIONS */
+    .section { padding: 80px 24px; }
+    .section-dark { background: var(--forge-navy); }
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal-blue); margin-bottom: 16px; }
+    .section-label-dark { color: var(--brass-gold); }
+    .section-title { font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 14px; max-width: 680px; }
+    .section-title-white { color: white; }
+    .section-sub { font-size: 16px; color: var(--gray-500); line-height: 1.6; max-width: 600px; margin-bottom: 48px; }
+    .section-sub-light { color: rgba(255,255,255,0.4); }
+    .section-center { text-align: center; }
+    .section-center .section-title, .section-center .section-sub { margin-left: auto; margin-right: auto; }
+
+    /* PROBLEMS */
+    .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 768px) { .problems-grid { grid-template-columns: 1fr; } }
+    .problem-card { background: white; border-radius: 14px; padding: 32px 28px; border: 1px solid var(--gray-200); transition: all 0.3s; }
+    .problem-card:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(10,37,64,0.08); }
+    .problem-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--red-500); text-transform: uppercase; margin-bottom: 14px; }
+    .problem-title { font-size: 20px; margin-bottom: 10px; }
+    .problem-desc { font-size: 14px; color: var(--gray-500); line-height: 1.6; margin-bottom: 16px; }
+    .problem-cost { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--red-500); font-weight: 600; padding: 8px 14px; background: rgba(239,68,68,0.06); border-radius: 6px; display: inline-block; }
+
+    /* HOW IT WORKS */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 768px) { .steps { grid-template-columns: 1fr; } }
+    .step-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 32px 28px; position: relative; }
+    .step-num { font-family: 'JetBrains Mono', monospace; font-size: 48px; font-weight: 700; color: rgba(255,255,255,0.04); position: absolute; top: 16px; right: 20px; }
+    .step-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+    .step-icon-blue { background: rgba(0,102,255,0.1); } .step-icon-gold { background: rgba(197,164,78,0.1); } .step-icon-green { background: rgba(16,185,129,0.1); }
+    .step-title { font-size: 18px; color: white; margin-bottom: 10px; }
+    .step-desc { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+
+    /* COMPARISON */
+    .compare-section { background: var(--sandstone-light); }
+    .compare-table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(10,37,64,0.06); }
+    .compare-table th, .compare-table td { padding: 16px 20px; text-align: center; font-size: 14px; border-bottom: 1px solid var(--gray-100); }
+    .compare-table th { background: var(--forge-navy); color: white; font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; }
+    .compare-table th:first-child, .compare-table td:first-child { text-align: left; }
+    .compare-table td:first-child { font-weight: 600; color: var(--forge-navy); }
+    .compare-table th.hl { background: var(--signal-blue); }
+    .compare-table td.hl { background: rgba(0,102,255,0.03); font-weight: 700; color: var(--signal-blue); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .ck { color: var(--verified-green); font-weight: 700; }
+    .cx { color: var(--red-500); }
+    @media (max-width: 768px) { .compare-table { font-size: 12px; } .compare-table th, .compare-table td { padding: 10px 8px; } }
+
+    /* DASHBOARD PREVIEW */
+    .dashboard-section { background: var(--terminal-dark); padding: 80px 24px; position: relative; overflow: hidden; }
+    .dashboard-section::before { content: ''; position: absolute; inset: 0; opacity: 0.03; background: repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,255,255,0.08) 50px); }
+    .dashboard-preview { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden; }
+    .dash-browser-bar { display: flex; align-items: center; gap: 6px; padding: 12px 16px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .dash-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dash-dot-r { background: #FF5F57; } .dash-dot-y { background: #FFBD2E; } .dash-dot-g { background: #28CA42; }
+    .dash-url { margin-left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.25); }
+    .dash-grid { display: grid; grid-template-columns: 240px 1fr; }
+    @media (max-width: 768px) { .dash-grid { grid-template-columns: 1fr; } }
+    .dash-sidebar { padding: 20px; border-right: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; gap: 12px; }
+    .dash-metric-card { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px; }
+    .dash-metric-label { font-size: 10px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+    .dash-metric-val { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+    .dash-metric-sub { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 4px; }
+    .dash-main { padding: 20px; }
+    .dash-chart { display: flex; align-items: flex-end; gap: 10px; height: 140px; margin-bottom: 20px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 10px; }
+    .chart-bar { flex: 1; background: linear-gradient(to top, var(--signal-blue), rgba(0,102,255,0.5)); border-radius: 4px 4px 0 0; position: relative; min-width: 24px; }
+    .chart-bar-label { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); font-size: 10px; color: rgba(255,255,255,0.25); font-family: 'JetBrains Mono', monospace; }
+    .dash-chart-title { font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.06em; writing-mode: vertical-rl; transform: rotate(180deg); align-self: center; }
+    .dash-lead-table { background: rgba(255,255,255,0.02); border-radius: 10px; overflow: hidden; }
+    .dash-table-header { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .dash-th { font-size: 10px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .dash-table-row { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,0.03); align-items: center; }
+    .dash-td { font-size: 13px; color: rgba(255,255,255,0.5); } .dash-td-name { color: white; font-weight: 600; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { background: white; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; } }
+    .testimonial-card { background: var(--sandstone-light); border-radius: 14px; padding: 32px 28px; border: 1px solid var(--sandstone); }
+    .testimonial-stars { color: var(--brass-gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-quote { font-size: 15px; color: var(--forge-navy); line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: white; flex-shrink: 0; }
+    .testimonial-name { font-size: 14px; font-weight: 700; }
+    .testimonial-role { font-size: 12px; color: var(--gray-500); }
+    .testimonial-result { margin-top: 16px; padding: 10px 14px; background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--verified-green); font-weight: 600; }
+
+    /* ROI */
+    .roi-section { background: var(--forge-navy); }
+    .roi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    @media (max-width: 768px) { .roi-grid { grid-template-columns: 1fr; } }
+    .roi-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 32px; }
+    .roi-line { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .roi-line:last-child { border-bottom: none; }
+    .roi-label { color: rgba(255,255,255,0.5); font-size: 14px; }
+    .roi-value { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: white; font-size: 16px; }
+    .roi-value.green { color: var(--verified-green); } .roi-value.gold { color: var(--brass-gold); }
+    .roi-total { background: rgba(16,185,129,0.08); border-radius: 10px; padding: 16px; margin-top: 12px; }
+    .roi-total-label { font-size: 12px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .roi-total-val { font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: var(--verified-green); }
+    .roi-text h3 { color: white; font-size: 24px; margin-bottom: 16px; }
+    .roi-text p { color: rgba(255,255,255,0.45); font-size: 15px; line-height: 1.7; margin-bottom: 12px; }
+    .roi-highlight { color: var(--verified-green); font-weight: 700; }
+
+    /* INDUSTRIES */
+    .industries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 768px) { .industries-grid { grid-template-columns: repeat(2, 1fr); } }
+    .industry-card { background: white; border: 1px solid var(--gray-200); border-radius: 14px; padding: 28px 20px; text-align: center; transition: all 0.3s; display: block; }
+    .industry-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(10,37,64,0.08); border-color: var(--signal-blue); }
+    .industry-icon { font-size: 32px; margin-bottom: 12px; }
+    .industry-name { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .industry-leads { font-size: 12px; color: var(--gray-500); }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+    @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .price-card { background: white; border: 1px solid var(--gray-200); border-radius: 16px; padding: 36px 28px; position: relative; transition: all 0.3s; }
+    .price-card:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(10,37,64,0.08); }
+    .price-card.featured { background: var(--forge-navy); border-color: var(--signal-blue); }
+    .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--signal-blue); color: white; font-size: 11px; font-weight: 700; padding: 4px 16px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+    .price-name { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .price-name-w { color: white; }
+    .price-amount { font-family: 'Sora', sans-serif; font-size: 42px; font-weight: 800; margin-bottom: 4px; }
+    .price-amount-w { color: white; }
+    .price-period { font-size: 16px; font-weight: 500; color: var(--gray-400); }
+    .price-roi { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: var(--verified-green); margin-bottom: 16px; padding: 6px 10px; background: var(--verified-green-bg); border-radius: 6px; display: inline-block; }
+    .price-roi-w { background: rgba(16,185,129,0.1); }
+    .price-desc { font-size: 14px; color: var(--gray-500); line-height: 1.5; margin-bottom: 24px; }
+    .price-desc-w { color: rgba(255,255,255,0.4); }
+    .price-features { list-style: none; margin-bottom: 28px; }
+    .price-features li { font-size: 14px; color: var(--gray-600); padding: 8px 0 8px 24px; position: relative; border-bottom: 1px solid var(--gray-100); }
+    .price-features li::before { content: '✓'; position: absolute; left: 0; color: var(--verified-green); font-weight: 700; }
+    .price-feat-w { color: rgba(255,255,255,0.6) !important; border-color: rgba(255,255,255,0.06) !important; }
+    .btn-price { display: block; text-align: center; padding: 14px 24px; border-radius: 10px; font-weight: 700; font-size: 14px; transition: all 0.2s; }
+    .btn-price-outline { background: transparent; color: var(--signal-blue); border: 2px solid var(--signal-blue); }
+    .btn-price-outline:hover { background: var(--signal-blue); color: white; }
+    .btn-price-solid { background: var(--signal-blue); color: white; border: 2px solid var(--signal-blue); }
+    .btn-price-solid:hover { background: var(--signal-blue-hover); border-color: var(--signal-blue-hover); }
+    .guarantee { display: flex; gap: 24px; align-items: flex-start; padding: 32px; background: white; border: 2px solid var(--brass-gold); border-radius: 16px; text-align: left; }
+    .guarantee-badge { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; }
+    .guarantee-badge-icon { font-size: 28px; }
+    .guarantee-badge-text { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 800; color: var(--brass-gold); text-transform: uppercase; letter-spacing: 0.08em; }
+    .guarantee h3 { font-size: 18px; margin-bottom: 8px; }
+    .guarantee p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+
+    /* FAQ */
+    .faq-section { background: var(--sandstone-light); }
+    .faq-list { max-width: 720px; margin: 0 auto; text-align: left; }
+    .faq-item { background: white; border: 1px solid var(--gray-200); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+    .faq-question { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: 15px; color: var(--forge-navy); transition: background 0.2s; }
+    .faq-question:hover { background: var(--gray-100); }
+    .faq-arrow { font-size: 14px; color: var(--gray-400); transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer { padding: 0 24px; max-height: 0; overflow: hidden; transition: all 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; padding: 0 24px 20px; }
+    .faq-answer p { font-size: 14px; color: var(--gray-500); line-height: 1.7; }
+
+    /* FINAL CTA */
+    .final-cta { background: var(--forge-navy); padding: 80px 24px; text-align: center; position: relative; overflow: hidden; }
+    .final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,102,255,0.08) 0%, transparent 70%); }
+    .final-cta .container { position: relative; z-index: 1; }
+    .final-cta h2 { font-size: clamp(32px, 4.5vw, 48px); color: white; margin-bottom: 16px; }
+    .final-cta h2 em { font-style: normal; color: var(--signal-blue); }
+    .final-cta p { color: rgba(255,255,255,0.45); font-size: 17px; max-width: 500px; margin: 0 auto 36px; line-height: 1.6; }
+    .final-cta-note { color: rgba(255,255,255,0.3); font-size: 13px; margin-top: 16px; }
+    .spots-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); border-radius: 100px; padding: 6px 16px; margin-bottom: 20px; }
+    .spots-badge-dot { width: 6px; height: 6px; background: var(--red-500); border-radius: 50%; animation: pulseDot 1.5s infinite; }
+    .spots-badge-text { font-size: 12px; font-weight: 700; color: #FF6B6B; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* FOOTER */
+    footer { background: var(--terminal-dark); padding: 48px 24px 24px; }
+    .footer-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+    @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr 1fr; gap: 24px; } }
+    .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .footer-logo-text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 18px; color: white; }
+    .footer-desc { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.6; max-width: 280px; }
+    .footer-col h5 { color: rgba(255,255,255,0.5); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.4); font-size: 13px; padding: 4px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* MOBILE STICKY CTA */
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: rgba(10,37,64,0.97); backdrop-filter: blur(10px); padding: 12px 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .sticky-cta a { display: block; text-align: center; background: var(--signal-blue); color: white; padding: 14px; border-radius: 10px; font-weight: 700; font-size: 15px; }
+    .sticky-cta-sub { text-align: center; font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 4px; }
+    @media (max-width: 768px) { .sticky-cta.visible { display: block; } footer { padding-bottom: 90px; } }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-logo-mark">LF</div><span class="nav-logo-text">LeadFlow<span>24</span></span></a>
+    <div class="nav-links">
+      <a href="#how">How It Works</a>
+      <a href="#proof">Results</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="/trial" class="nav-cta">Start Free Trial</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#how">How It Works</a><a href="#proof">Results</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/trial">Start Free Trial →</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge fade-up"><div class="hero-badge-dot"></div><span class="hero-badge-text">Only 3 Trial Spots Left This Month</span></div>
+      <h1 class="fade-up d1">We send <em>exclusive leads</em> to your phone. You close the jobs.</h1>
+      <p class="hero-sub fade-up d2">Real homeowners in your area who need the work done now. Not shared with 5 competitors. Not recycled from last year. Your leads. Your phone ringing.</p>
+      <div class="hero-ctas fade-up d3">
+        <a href="/trial" class="btn-primary">Start Your Free Trial <span>→</span></a>
+        <a href="#proof" class="btn-secondary">See Real Results</a>
+      </div>
+      <div class="hero-proof fade-up d4">
+        <div><div class="hero-proof-num">$18-35</div><div class="hero-proof-label">Cost per lead</div></div>
+        <div><div class="hero-proof-num">100%</div><div class="hero-proof-label">Exclusive to you</div></div>
+        <div><div class="hero-proof-num">$0</div><div class="hero-proof-label">Upfront cost</div></div>
+      </div>
+    </div>
+    <div class="hero-dashboard fade-up d3">
+      <div class="dash-header"><div class="dash-title">Client Dashboard</div><div class="dash-live"><div class="dash-live-dot"></div><span class="dash-live-text">Live</span></div></div>
+      <div class="dash-stats">
+        <div class="dash-stat"><div class="dash-stat-label">Leads</div><div class="dash-stat-val green">23</div><div class="dash-stat-change">↑ 4 today</div></div>
+        <div class="dash-stat"><div class="dash-stat-label">Jobs</div><div class="dash-stat-val blue">7</div><div class="dash-stat-change">30% close</div></div>
+        <div class="dash-stat"><div class="dash-stat-label">Revenue</div><div class="dash-stat-val gold">$18.4K</div><div class="dash-stat-change">↑ $3.2K/wk</div></div>
+      </div>
+      <div class="dash-leads">
+        <div class="dash-lead-row"><div class="dash-lead-avatar" style="background:rgba(0,102,255,0.15);color:var(--signal-blue)">MR</div><div class="dash-lead-info"><div class="dash-lead-name">M. Richardson</div><div class="dash-lead-detail">Furnace repair — Windermere</div></div><div class="dash-lead-tag tag-booked">Booked</div></div>
+        <div class="dash-lead-row"><div class="dash-lead-avatar" style="background:rgba(197,164,78,0.15);color:var(--brass-gold)">KT</div><div class="dash-lead-info"><div class="dash-lead-name">K. Thompson</div><div class="dash-lead-detail">AC install — Millwoods</div></div><div class="dash-lead-tag tag-contacted">Contacted</div></div>
+        <div class="dash-lead-row"><div class="dash-lead-avatar" style="background:rgba(16,185,129,0.15);color:var(--verified-green)">JW</div><div class="dash-lead-info"><div class="dash-lead-name">J. Williams</div><div class="dash-lead-detail">Duct cleaning — St. Albert</div></div><div class="dash-lead-tag tag-new">New</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar"><div class="trust-bar-inner">
+  <div class="trust-item"><span class="trust-icon">🛡️</span><span class="trust-text">No Contracts. Cancel Anytime.</span></div>
+  <div class="trust-item"><span class="trust-icon">📊</span><span class="trust-text">Every Lead. Every Dollar. Tracked.</span></div>
+  <div class="trust-item"><span class="trust-icon">🔒</span><span class="trust-text">100% Exclusive — Never Shared</span></div>
+  <div class="trust-item"><span class="trust-icon">💰</span><span class="trust-text">We Fund the Ads. You Keep the Customers.</span></div>
+</div></div>
+
+<section class="section" id="problems"><div class="container">
+  <div class="section-label">◆ The Problem</div>
+  <h2 class="section-title">You're paying for leads that don't pick up the phone.</h2>
+  <p class="section-sub">Most lead gen companies sell the same lead to your competitor down the street. You're racing to call first — and losing.</p>
+  <div class="problems-grid">
+    <div class="problem-card"><div class="problem-num">Problem #1</div><h3 class="problem-title">Shared Leads, Dead Ends</h3><p class="problem-desc">The lead you paid $85 for? Three other contractors got the same name and number. The homeowner picks whoever calls first. Your close rate drops below 5%.</p><div class="problem-cost">Avg wasted: $3,400/mo</div></div>
+    <div class="problem-card"><div class="problem-num">Problem #2</div><h3 class="problem-title">Locked Into Long Contracts</h3><p class="problem-desc">Six-month minimums. No performance guarantees. No visibility into ad spend. You're paying and praying every single month.</p><div class="problem-cost">Avg wasted: $2,800/mo</div></div>
+    <div class="problem-card"><div class="problem-num">Problem #3</div><h3 class="problem-title">Reports That Mean Nothing</h3><p class="problem-desc">They send a PDF with impressions and clicks. Zero tracking from lead to booked job. You have no idea if the $4,000 you spent turned into actual revenue.</p><div class="problem-cost">Avg wasted: $1,600/mo</div></div>
+  </div>
+</div></section>
+
+<section class="section section-dark" id="how"><div class="container">
+  <div class="section-label section-label-dark">◆ How It Works</div>
+  <h2 class="section-title section-title-white">Three steps. Zero risk. Your phone starts ringing.</h2>
+  <p class="section-sub section-sub-light">No setup fees. No contracts. We fund your first 14 days of ads out of our own pocket.</p>
+  <div class="steps">
+    <div class="step-card"><div class="step-num">01</div><div class="step-icon step-icon-blue">🎯</div><h3 class="step-title">We Build Your Campaign</h3><p class="step-desc">Custom landing page for your business. Targeted ads to homeowners in your service area. Built, funded, and launched by us — within 48 hours.</p></div>
+    <div class="step-card"><div class="step-num">02</div><div class="step-icon step-icon-gold">📱</div><h3 class="step-title">Leads Hit Your Phone</h3><p class="step-desc">Verified homeowners who need the work done. Name, phone, service needed, neighbourhood. Delivered instantly via text and email. Exclusive. Never shared.</p></div>
+    <div class="step-card"><div class="step-num">03</div><div class="step-icon step-icon-green">📊</div><h3 class="step-title">Track Every Dollar</h3><p class="step-desc">Live dashboard shows every lead, every status update, every job booked. See exactly what we spent and what you earned. If the math doesn't work — walk away.</p></div>
+  </div>
+</div></section>
+
+<section class="section compare-section"><div class="container section-center">
+  <div class="section-label">◆ Why LeadFlow24</div>
+  <h2 class="section-title">Stop paying more for worse leads.</h2>
+  <p class="section-sub">Here's how we stack up against the services you've probably already tried.</p>
+  <table class="compare-table">
+    <thead><tr><th style="text-align:left">Feature</th><th class="hl">LeadFlow24</th><th>HomeStars / Bark</th><th>Agency Retainer</th><th>Google Ads DIY</th></tr></thead>
+    <tbody>
+      <tr><td>Exclusive leads (not shared)</td><td class="hl ck">✓</td><td class="cx">✗</td><td>Sometimes</td><td class="ck">✓</td></tr>
+      <tr><td>No long-term contract</td><td class="hl ck">✓</td><td class="ck">✓</td><td class="cx">✗ 6-12 mo</td><td class="ck">✓</td></tr>
+      <tr><td>Free trial (we fund ads)</td><td class="hl ck">✓ 14 days</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
+      <tr><td>Live ROI dashboard</td><td class="hl ck">✓</td><td class="cx">✗</td><td>PDF reports</td><td>Basic</td></tr>
+      <tr><td>Average cost per lead</td><td class="hl" style="color:var(--verified-green);font-weight:700;">$18-35</td><td>$40-100</td><td>$60-150+</td><td>$50-120</td></tr>
+      <tr><td>Setup time</td><td class="hl">48 hours</td><td>Self-serve</td><td>2-4 weeks</td><td>Self-serve</td></tr>
+      <tr><td>Dedicated landing page</td><td class="hl ck">✓</td><td class="cx">✗</td><td>Sometimes</td><td class="cx">✗</td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section class="dashboard-section" id="dashboard"><div class="container" style="position:relative;z-index:1;">
+  <div class="section-label section-label-dark">◆ Your Dashboard</div>
+  <h2 class="section-title section-title-white">See every lead. Track every dollar. No guesswork.</h2>
+  <p class="section-sub section-sub-light">This is what transparency looks like. Real numbers, real time, accessible 24/7.</p>
+  <div class="dashboard-preview">
+    <div class="dash-browser-bar"><div class="dash-dot dash-dot-r"></div><div class="dash-dot dash-dot-y"></div><div class="dash-dot dash-dot-g"></div><div class="dash-url">app.leadflow24.com/dashboard</div></div>
+    <div class="dash-grid">
+      <div class="dash-sidebar">
+        <div class="dash-metric-card"><div class="dash-metric-label">Total Leads This Month</div><div class="dash-metric-val" style="color:var(--signal-blue);">47</div><div class="dash-metric-sub">↑ 12 from last month</div></div>
+        <div class="dash-metric-card"><div class="dash-metric-label">Jobs Booked</div><div class="dash-metric-val" style="color:var(--verified-green);">14</div><div class="dash-metric-sub">29.8% close rate</div></div>
+        <div class="dash-metric-card"><div class="dash-metric-label">Revenue Generated</div><div class="dash-metric-val" style="color:var(--brass-gold);">$38.2K</div><div class="dash-metric-sub">$814 per lead value</div></div>
+        <div class="dash-metric-card"><div class="dash-metric-label">Cost Per Lead</div><div class="dash-metric-val">$24</div><div class="dash-metric-sub" style="color:var(--verified-green);">vs $78 industry avg</div></div>
+      </div>
+      <div class="dash-main">
+        <div class="dash-chart"><div class="dash-chart-title">Leads</div>
+          <div class="chart-bar" style="height:35%;"><span class="chart-bar-label">W1</span></div>
+          <div class="chart-bar" style="height:52%;"><span class="chart-bar-label">W2</span></div>
+          <div class="chart-bar" style="height:68%;"><span class="chart-bar-label">W3</span></div>
+          <div class="chart-bar" style="height:85%;"><span class="chart-bar-label">W4</span></div>
+          <div class="chart-bar" style="height:75%;"><span class="chart-bar-label">W5</span></div>
+          <div class="chart-bar" style="height:92%;"><span class="chart-bar-label">W6</span></div>
+          <div class="chart-bar" style="height:78%;"><span class="chart-bar-label">W7</span></div>
+          <div class="chart-bar" style="height:100%;"><span class="chart-bar-label">W8</span></div>
+        </div>
+        <div class="dash-lead-table">
+          <div class="dash-table-header"><div class="dash-th">Lead</div><div class="dash-th">Service</div><div class="dash-th">Status</div><div class="dash-th">Value</div></div>
+          <div class="dash-table-row"><div class="dash-td dash-td-name">Sarah Mitchell</div><div class="dash-td">Furnace install</div><div class="dash-td"><span class="dash-lead-tag tag-booked">Booked</span></div><div class="dash-td" style="color:var(--verified-green);font-weight:600;">$4,200</div></div>
+          <div class="dash-table-row"><div class="dash-td dash-td-name">David Chen</div><div class="dash-td">AC repair</div><div class="dash-td"><span class="dash-lead-tag tag-contacted">Contacted</span></div><div class="dash-td">—</div></div>
+          <div class="dash-table-row"><div class="dash-td dash-td-name">Lisa Park</div><div class="dash-td">Roof replacement</div><div class="dash-td"><span class="dash-lead-tag tag-booked">Booked</span></div><div class="dash-td" style="color:var(--verified-green);font-weight:600;">$8,900</div></div>
+          <div class="dash-table-row"><div class="dash-td dash-td-name">James Torres</div><div class="dash-td">Pipe repair</div><div class="dash-td"><span class="dash-lead-tag tag-new">New</span></div><div class="dash-td">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section testimonials-section" id="proof"><div class="container">
+  <div class="section-label">◆ Real Results</div>
+  <h2 class="section-title">Contractors who stopped guessing and started tracking.</h2>
+  <p class="section-sub">Real numbers from real businesses in the first 30-60 days.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-quote">"I was spending $3,200/month on HomeStars and had no clue what was converting. LeadFlow showed me exactly what every dollar turned into. Booked 11 jobs in the first month."</p><div class="testimonial-author"><div class="testimonial-avatar" style="background:var(--signal-blue);">RK</div><div><div class="testimonial-name">Ryan K.</div><div class="testimonial-role">HVAC Contractor — Edmonton, AB</div></div></div><div class="testimonial-result">↑ 11 jobs booked · $27,400 revenue · Month 1</div></div>
+    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-quote">"The free trial sold me. I didn't pay anything for 14 days and still got 8 qualified leads. Three turned into roofing jobs over $6K each. No lead company has ever proven it before asking for money."</p><div class="testimonial-author"><div class="testimonial-avatar" style="background:var(--brass-gold);">MP</div><div><div class="testimonial-name">Marco P.</div><div class="testimonial-role">Roofing Company Owner — Calgary, AB</div></div></div><div class="testimonial-result">↑ 8 trial leads · 3 jobs booked · $19,200 revenue</div></div>
+    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-quote">"Biggest difference: I'm not competing with 4 other plumbers for the same call. Every lead is mine. The dashboard is exactly what I wished my old agency had given me."</p><div class="testimonial-author"><div class="testimonial-avatar" style="background:var(--verified-green);">DL</div><div><div class="testimonial-name">Dave L.</div><div class="testimonial-role">Master Plumber — Toronto, ON</div></div></div><div class="testimonial-result">↑ 22 leads/mo · $15-28 per lead · 34% close rate</div></div>
+  </div>
+</div></section>
+
+<section class="section roi-section"><div class="container">
+  <div class="roi-grid">
+    <div class="roi-text">
+      <div class="section-label section-label-dark">◆ The Math</div>
+      <h3>Your $597/mo turns into $14,400+ in revenue.</h3>
+      <p>We're not asking you to trust our marketing. We're asking you to look at the numbers.</p>
+      <p>On the Growth plan, you get 20-30 leads per month. Even at a conservative 25% close rate with an average job value of $2,400:</p>
+      <p><span class="roi-highlight">Every dollar you spend with LeadFlow turns into $15-20 back.</span></p>
+      <p>And you track every step on your dashboard — in real time.</p>
+    </div>
+    <div class="roi-card">
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;font-weight:600;">Growth Plan — Monthly Snapshot</div>
+      <div class="roi-line"><div class="roi-label">Leads delivered</div><div class="roi-value">25</div></div>
+      <div class="roi-line"><div class="roi-label">Close rate (conservative)</div><div class="roi-value">25%</div></div>
+      <div class="roi-line"><div class="roi-label">Jobs booked</div><div class="roi-value green">6-7</div></div>
+      <div class="roi-line"><div class="roi-label">Average job value</div><div class="roi-value gold">$2,400</div></div>
+      <div class="roi-line"><div class="roi-label">LeadFlow cost</div><div class="roi-value">-$597</div></div>
+      <div class="roi-total"><div class="roi-total-label">Net Revenue Generated</div><div class="roi-total-val">$14,400+</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" style="background:white;"><div class="container section-center">
+  <div class="section-label">◆ Industries We Serve</div>
+  <h2 class="section-title">Built for contractors who close jobs — not clicks.</h2>
+  <p class="section-sub">Custom campaigns and landing pages built specifically for your trade.</p>
+  <div class="industries-grid">
+    <a href="/quote/hvac/edmonton" class="industry-card"><div class="industry-icon">🔥</div><div class="industry-name">HVAC</div><div class="industry-leads">Furnace, AC, duct cleaning</div></a>
+    <a href="/quote/roofing/edmonton" class="industry-card"><div class="industry-icon">🏠</div><div class="industry-name">Roofing</div><div class="industry-leads">Repairs, replacements, inspections</div></a>
+    <a href="/quote/plumbing/edmonton" class="industry-card"><div class="industry-icon">🔧</div><div class="industry-name">Plumbing</div><div class="industry-leads">Leaks, drains, water heaters</div></a>
+    <div class="industry-card"><div class="industry-icon">🚗</div><div class="industry-name">Auto Services</div><div class="industry-leads">Detailing, wraps, collision</div></div>
+  </div>
+</div></section>
+
+<section class="section" id="pricing" style="background:var(--sandstone-light);"><div class="container section-center">
+  <div class="section-label">◆ Pricing</div>
+  <h2 class="section-title">Simple pricing. Real results. Cancel anytime.</h2>
+  <p class="section-sub">Every plan starts with a 14-day free trial. We fund the ads. You see the leads first.</p>
+  <div class="pricing-grid">
+    <div class="price-card"><div class="price-name">Starter</div><div class="price-amount">$397<span class="price-period">/mo</span></div><div class="price-roi">→ Avg return: $6,000-$9,000/mo</div><p class="price-desc">For shops testing dedicated lead gen for the first time.</p><ul class="price-features"><li>10-15 exclusive leads/month</li><li>1 dedicated landing page</li><li>Live dashboard access</li><li>Lead delivery via SMS + email</li><li>Monthly performance report</li></ul><a href="/trial" class="btn-price btn-price-outline">Start Free Trial</a></div>
+    <div class="price-card featured"><div class="price-badge">Most Popular</div><div class="price-name price-name-w">Growth</div><div class="price-amount price-amount-w">$597<span class="price-period">/mo</span></div><div class="price-roi price-roi-w">→ Avg return: $12,000-$18,000/mo</div><p class="price-desc price-desc-w">For shops ready to fill their schedule and grow consistently.</p><ul class="price-features"><li class="price-feat-w">20-30 exclusive leads/month</li><li class="price-feat-w">2 dedicated landing pages</li><li class="price-feat-w">Live dashboard + full tracking</li><li class="price-feat-w">Priority lead delivery</li><li class="price-feat-w">Bi-weekly optimization calls</li><li class="price-feat-w">Google Reviews follow-up system</li></ul><a href="/trial" class="btn-price btn-price-solid">Start Free Trial</a></div>
+    <div class="price-card"><div class="price-name">Scale</div><div class="price-amount">$997<span class="price-period">/mo</span></div><div class="price-roi">→ Avg return: $24,000-$36,000/mo</div><p class="price-desc">For established shops dominating their market.</p><ul class="price-features"><li>40-60 exclusive leads/month</li><li>Unlimited landing pages</li><li>Live dashboard + full analytics</li><li>Multi-city targeting</li><li>Weekly strategy calls</li><li>Dedicated account manager</li></ul><a href="/trial" class="btn-price btn-price-outline">Start Free Trial</a></div>
+  </div>
+  <div class="guarantee"><div class="guarantee-badge"><div class="guarantee-badge-icon">🛡️</div><div class="guarantee-badge-text">Iron-Clad</div></div><div><h3>The Iron-Clad Guarantee</h3><p>Start with a 14-day free trial. We fund the ads — not you. You'll see real leads with real names and phone numbers. If the numbers don't work for your business, walk away. It cost you nothing. No contracts. No commitments. No fine print. We prove it works before you pay a cent.</p></div></div>
+</div></section>
+
+<section class="section faq-section" id="faq"><div class="container section-center">
+  <div class="section-label">◆ Questions</div>
+  <h2 class="section-title">Everything you need to know before starting.</h2>
+  <p class="section-sub">Question not here? Email <a href="mailto:luke@leadflow24.com" style="color:var(--signal-blue);font-weight:600;">luke@leadflow24.com</a> — we respond within 2 hours.</p>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What does "exclusive leads" actually mean?<span class="faq-arrow">▼</span></div><div class="faq-answer"><p>Every lead we generate goes to you and only you. We never sell the same lead to multiple contractors. When a homeowner fills out your landing page, their info goes to your phone and your dashboard — nobody else. This is the opposite of HomeStars, Bark, and most lead companies where one lead gets sent to 3-5 competitors.</p></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What happens during the 14-day free trial?<span class="faq-arrow">▼</span></div><div class="faq-answer"><p>We build a custom landing page, launch targeted ads to homeowners in your area, and fund the ad spend ourselves. You get real leads delivered to your phone — typically within 3-5 days. Track everything on your live dashboard. At the end of 14 days, if the leads are good, you pick a plan. If not, walk away. You owe nothing.</p></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">How quickly will I start getting leads?<span class="faq-arrow">▼</span></div><div class="faq-answer"><p>Most clients see their first leads within 48-72 hours of launch. Your campaign goes live within 48 hours of signing up. By the end of week one, you'll have a clear picture of lead quality, volume, and cost — all tracked in real time on your dashboard.</p></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Is there a contract or minimum commitment?<span class="faq-arrow">▼</span></div><div class="faq-answer"><p>No. Zero contracts. Zero minimums. After your free trial, billing is month-to-month. Cancel anytime with one email. We keep clients by delivering results, not by locking people in.</p></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What if I get leads that don't convert?<span class="faq-arrow">▼</span></div><div class="faq-answer"><p>We monitor your close rate through the dashboard and optimize weekly. If a lead is clearly junk — wrong number, wrong area, not a real person — we replace it. Our goal is your ROI, not just lead volume.</p></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Which areas and industries do you serve?<span class="faq-arrow">▼</span></div><div class="faq-answer"><p>HVAC, roofing, plumbing, electrical, and auto services across Canada — with active campaigns in Edmonton, Calgary, Toronto, and the GTA. If you're a contractor anywhere in Canada, email us to check availability.</p></div></div>
+  </div>
+</div></section>
+
+<section class="final-cta" id="trial-cta"><div class="container">
+  <div class="spots-badge"><div class="spots-badge-dot"></div><span class="spots-badge-text">Only 3 trial spots left this month</span></div>
+  <h2>See the leads <em>before you pay a dime.</em></h2>
+  <p>14-day free trial. We fund the ads. You close the jobs. If it works, keep going. If not, walk away — it cost you nothing.</p>
+  <a href="/trial" class="btn-primary" style="font-size:17px;padding:16px 36px;">Start Your Free Trial →</a>
+  <div class="final-cta-note">🔒 No credit card required · No contracts · Setup in 48 hours</div>
+</div></section>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-logo"><div class="nav-logo-mark" style="width:30px;height:30px;font-size:12px;">LF</div><span class="footer-logo-text">LeadFlow24</span></div><p class="footer-desc">Exclusive, verified leads for contractors and service businesses. Built on proof, not promises.</p></div>
+    <div class="footer-col"><h5>Product</h5><a href="#how">How It Works</a><a href="#dashboard">Dashboard</a><a href="#pricing">Pricing</a><a href="/trial">Free Trial</a></div>
+    <div class="footer-col"><h5>Industries</h5><a href="/quote/hvac/edmonton">HVAC</a><a href="/quote/roofing/edmonton">Roofing</a><a href="/quote/plumbing/edmonton">Plumbing</a><a href="/trial">Auto Services</a></div>
+    <div class="footer-col"><h5>Contact</h5><a href="mailto:luke@leadflow24.com">luke@leadflow24.com</a><a href="#faq">Edmonton · Calgary · Toronto</a></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 LeadFlow24. All rights reserved.</div><div class="footer-legal"><a href="mailto:luke@leadflow24.com">Privacy</a><a href="mailto:luke@leadflow24.com">Terms</a></div></div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta"><a href="/trial">Start Free Trial — $0 for 14 Days →</a><div class="sticky-cta-sub">No credit card · No contracts · Setup in 48hrs</div></div>
+
+<script>
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+nav.classList.add('scrolled');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.style.animationPlayState = 'running'; });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => { el.style.animationPlayState = 'paused'; observer.observe(el); });
+
+const stickyCta = document.getElementById('stickyCta');
+new IntersectionObserver(entries => {
+  entries.forEach(e => stickyCta.classList.toggle('visible', !e.isIntersecting));
+}, { threshold: 0 }).observe(document.querySelector('.hero'));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const t = document.querySelector(this.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.mobile-menu').classList.remove('open'); }
+  });
+});
+
+let dashAnimated = false;
+new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !dashAnimated) {
+      dashAnimated = true;
+      document.querySelectorAll('.dashboard-section .chart-bar').forEach((bar, i) => {
+        const h = bar.style.height; bar.style.height = '0%';
+        bar.style.transition = `height 0.6s ease ${i * 0.08}s`;
+        requestAnimationFrame(() => bar.style.height = h);
+      });
+    }
+  });
+}, { threshold: 0.3 }).observe(document.querySelector('.dashboard-section'));
+</script>
+</body>
+</html>
